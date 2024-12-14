@@ -1,135 +1,248 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BOTPEMULA</title>
-    <style>
-        /* CSS */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
-            transition: background-color 0.3s, color 0.3s;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOTPEMULA - Dark Mode</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 1rem;
-        }
+    /* Body */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
 
-        main {
-            padding: 2rem;
-            text-align: center;
-        }
+    /* Header Section */
+    header {
+      position: relative;
+      padding: 20px;
+      text-align: center;
+      overflow: hidden;
+    }
 
-        footer {
-            background-color: #ddd;
-            text-align: center;
-            padding: 1rem;
-            margin-top: 2rem;
-        }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+      background-size: 300% 100%;
+      animation: rgb-background 5s infinite linear;
+      filter: blur(40px); /* Tambahkan blur */
+      z-index: -1;
+    }
 
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin: 10px;
-        }
+    header h1 {
+      position: relative;
+      color: white;
+      font-size: 40px;
+      z-index: 1;
+    }
 
-        button:hover {
-            background-color: #45a049;
-        }
+    /* Main Content Area */
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      text-align: center;
+    }
 
-        /* Mode gelap */
-        body.dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
+    /* Content for ROM Installations */
+    .content-installation {
+      text-align: left;
+      margin: 20px;
+      padding: 10px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
 
-        body.dark-mode header {
-            background-color: #1E88E5;
-        }
+    .content-installation h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
 
-        body.dark-mode footer {
-            background-color: #333;
-        }
+    .content-installation p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
 
-        body.dark-mode button {
-            background-color: #1E88E5;
-        }
+    .content-installation a {
+      color: #03fcf4;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
-        body.dark-mode button:hover {
-            background-color: #1565C0;
-        }
+    .content-installation a:hover {
+      color: #03d3fc;
+    }
 
-        /* Styling untuk social media links */
-        .social-links {
-            margin-top: 20px;
-        }
+    /* Social Media Section */
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
 
-        .social-links a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #4CAF50;
-            font-size: 24px;
-        }
+    .social-btn {
+      padding: 10px 20px;
+      color: grey;
+      text-decoration: none;
+      background-color: transparent;
+      border: 3px solid transparent;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      width: 100px;
+      height: 40px;
+      text-align: center;
+      font-size: 20px;
+      line-height: 35px; /* Center the text vertically */
+      transition: 0.1s;
+    }
 
-        .social-links a:hover {
-            color: #45a049;
-        }
-    </style>
+    .social-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 10px solid transparent;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background: linear-gradient(25deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+      background-size: 300% 100%;
+      mask: radial-gradient(transparent 0%, #fff 0%);
+      -webkit-mask: radial-gradient(transparent 0%, #fff 0%);
+      animation: rgb-border 5s infinite linear;
+      filter: blur(25px); /* Tambahkan blur */
+      z-index: -1;
+    }
+
+    @keyframes rgb-background {
+      0% {
+        background-position: 0% 25%;
+      }
+      25% {
+        background-position: 25% 50%;
+      }
+      50% {
+        background-position: 50% 75%;
+      }
+      75% {
+        background-position: 75% 100%;
+      }
+      100% {
+        background-position: 150% 0%;
+      }
+    }
+
+    @keyframes rgb-border {
+      0% {
+        background-position: 0% 25%;
+      }
+      25% {
+        background-position: 25% 50%;
+      }
+      50% {
+        background-position: 50% 75%;
+      }
+      75% {
+        background-position: 75% 100%;
+      }
+      100% {
+        background-position: 150% 0%;
+      }
+    }
+
+    /* Footer */
+    footer {
+      position: relative;
+      padding: 10px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+      background-size: 300% 100%;
+      animation: rgb-background 5s infinite linear;
+      filter: blur(40px); /* Tambahkan blur */
+      z-index: -1;
+    }
+
+    footer p {
+      position: relative;
+      color: white;
+      font-size: 16px;
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>BOTPEMULA</h1>
-    </header>
-    <main>
-        <p>Ini adalah contoh web sederhana yang mengikuti mode sistem perangkat Anda.</p>
-        <button id="alertButton">Klik Saya</button>
-        
-        <!-- Social Media Links -->
-        <div class="social-links">
-            <a href="https://www.youtube.com" target="_blank">YouTube</a>
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 BOTPEMULA</p>
-    </footer>
-    <script>
-        // JavaScript
+  <!-- Header Section -->
+  <header>
+    <h1>BOTPEMULA</h1>
+  </header>
 
-        // Fungsi untuk mengecek preferensi mode gelap sistem
-        function applyDarkModePreference() {
-            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-            if (prefersDarkMode) {
-                document.body.classList.add('dark-mode');
-            } else {
-                document.body.classList.remove('dark-mode');
-            }
-        }
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <!-- ROM Installation Content -->
+    <div class="content-installation">
+      <h2>Install Resurrection Remix Oppo A37F</h2>
+      <p>How to install Resurrection Remix ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tolls and ingredients. For how to install and install it, you can watch the video below.<p>Don't forget to subscribe to my channel so you don't miss the latest updates. like and share my videos. Thanks</p>
+      <a href="https://youtu.be/RgOTOuzMXtw?si=0Ew6W21k_ySGvjoU" target="_blank">Watch Video</a>
+    </div>
 
-        // Jalankan saat halaman dimuat
-        applyDarkModePreference();
+    <div class="content-installation">
+      <h2>Install Android 12 Oppo A37F</h2>
+      <p>How to install Android 12 ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tolls and ingredients. For how to install and install it, you can watch the video below.<p>Don't forget to subscribe to my channel so you don't miss the latest updates. like and share my videos. Thanks</p>
+      <a href="https://youtu.be/ZDLjANGWRFA?si=CzIuPGzFC-JteZIA" target="_blank">Watch Video</a>
+    </div>
 
-        // Pantau perubahan preferensi mode sistem
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-            applyDarkModePreference();
-        });
+    <div class="content-installation">
+      <h2>Install Potato Os Oppo A37F</h2>
+      <p>How to install Potato os ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tolls and ingredients. For how to install and install it, you can watch the video below.<p>Don't forget to subscribe to my channel so you don't miss the latest updates. like and share my videos. Thanks</p>
+      <a href="https://youtu.be/kMDdF7frBM8?si=kruS9NueXb0v5eKB" target="_blank">Watch Video</a>
+    </div>
 
-        // Event untuk tombol "Klik Saya"
-        document.getElementById('alertButton').addEventListener('click', function () {
-            alert('Tombol diklik!');
-        });
-    </script>
+    <div class="content-installation">
+      <h2>Install Ancient OS Weaboo Oppo A37F</h2>
+      <p>How to install Ancient OS Weaboo ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tolls and ingredients. For how to install and install it, you can watch the video below.<p>Don't forget to subscribe to my channel so you don't miss the latest updates. like and share my videos. Thanks</p>
+      <a href="https://youtu.be/wbjSwplzGWs?si=EOsV1hAcKCtZHpjZ" target="_blank">Watch Video</a>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+      <a href="#" class="social-btn" id="instagram">Instagram</a>
+      <a href="https://youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" id="youtube">YouTube</a>
+      <a href="#" class="social-btn" id="tiktok">TikTok</a>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 BOTPEMULA. All rights reserved.</p>
+  </footer>
 </body>
 </html>
