@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BOTPEMULA - Home</title>
+  <title>BOTPEMULA - Dark Mode</title>
+  
+  <!-- Link CSS Prism -->
+  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet"/>
+  
+  <!-- Link JS Prism -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-php.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  
   <style>
     /* General Reset */
     * {
@@ -112,7 +121,18 @@
       justify-content: center; /* Horizontally center the text */
       align-items: center;     /* Vertically center the text */
       font-size: 20px;
-      transition: 0.1s;
+      transition: 0s;
+    }
+    
+    .social-btn {
+      outline: none !important; /* Menghapus outline */
+      box-shadow: none !important; /* Menghapus box shadow */
+      -webkit-tap-highlight-color: transparent; /* Menghapus efek biru di klik */
+    }
+
+    *:focus {
+      outline: none !important;
+      box-shadow: none !important;
     }
 
     .social-btn::before {
@@ -205,7 +225,7 @@
   <header>
     <h1>BOTPEMULA</h1>
   </header>
-
+  
   <!-- Main Content Area -->
   <div class="main-content">
     <!-- ROM Installation Content -->
@@ -233,11 +253,45 @@
       <a href="https://youtu.be/wbjSwplzGWs?si=EOsV1hAcKCtZHpjZ" target="_blank">Watch Video</a>
     </div>
 
+    <!-- Example of Code Block for Syntax Highlighting -->
+    <div class="content-installation">
+      <h2>PHP Code Input Cookie</h2>
+      <pre class="line-numbers"><code class="language-php">
+&lt;?php
+class botpemula
+{
+    private function loadcookie() 
+    {
+        if (file_exists('session')) 
+        {
+            $cookie = file_get_contents('session');
+            
+            if (!empty($cookie)) 
+            {
+                return $cookie;
+            }
+        }
+        
+        $this->promptcookie();
+    }
+
+    private function promptcookie()
+    {
+        echo " Input Cookie: ";
+        $cookie = trim(fgets(STDIN));
+        file_put_contents('session', $cookie);
+        $this->cookie = $cookie;
+    }
+}
+?&gt;
+      </code></pre>
+    </div>
+
     <!-- Social Media Links -->
     <div class="social-media">
-      <a href="#" class="social-btn" id="instagram">Instagram</a>
-      <a href="https://youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" id="youtube">YouTube</a>
-      <a href="#" class="social-btn" id="tiktok">TikTok</a>
+      <a href="index2.html" class="social-btn" tabindex="-1" id="instagram">Instagram</a>
+      <a href="https://youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" tabindex="-1" id="youtube">YouTube</a>
+      <a href="index2.html" class="social-btn" tabindex="-1" id="tiktok">TikTok</a>
     </div>
   </div>
 
@@ -245,5 +299,11 @@
   <footer>
     <p>&copy; 2024 BOTPEMULA. All rights reserved.</p>
   </footer>
+  
+  <script>
+    // Enable PrismJS for syntax highlighting
+    Prism.highlightAll();
+  </script>
+  
 </body>
 </html>
