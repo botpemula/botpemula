@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  background-color: #1c1c1c;
+  z-index: 1000;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+  background-size: 300% 100%;
+  animation: rgb-background 12s infinite linear;
+  filter: blur(25px);
+  z-index: -1;
+}
+
+header h1 {
+  position: relative;
+  color: white;
+  font-size: 40px;
+  z-index: 1;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.content-installation {
+  text-align: left;
+  margin: 20px;
+  padding: 10px;
+  background-color: #1c1c1c;
+  border-radius: 8px;
+}
+
+.content-installation h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content-installation p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.content-installation a {
+  color: #03fcf4;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.content-installation a:hover {
+  color: #03d3fc;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 0px;
+}
+
+.social-btn {
+  padding: 10px 20px;
+  color: grey;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  width: 100px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: 0s;
+}
+
+.social-btn {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.social-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 10px solid transparent;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background: linear-gradient(25deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+  background-size: 300% 100%;
+  mask: radial-gradient(transparent 0%, #fff 0%);
+  -webkit-mask: radial-gradient(transparent 0%, #fff 0%);
+  animation: rgb-border 12s infinite linear;
+  filter: blur(25px);
+  z-index: -1;
+}
+
+/* Animations */
+@keyframes rgb-background {
+  0% { background-position: 300% 0; }
+  100% { background-position: 0 0; }
+}
+
+@keyframes rgb-border {
+  0% { background-position: 300% 0; }
+  100% { background-position: 0 0; }
+}
+    
+/*
+@keyframes rgb-background {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 50% 75%;
+  }
+  75% {
+    background-position: 75% 100%;
+  }
+  100% {
+    background-position: 150% 0%;
+  }
+}
+
+@keyframes rgb-border {
+  0% {
+    background-position: 0% 25%;
+  }
+  25% {
+    background-position: 25% 50%;
+  }
+  50% {
+    background-position: 50% 75%;
+  }
+  75% {
+    background-position: 75% 100%;
+  }
+  100% {
+    background-position: 150% 0%;
+  }
+}
+*/
+
+footer {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+  background-size: 300% 100%;
+  animation: rgb-background 12s infinite linear;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+footer p {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  z-index: 1;
+}
