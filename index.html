@@ -1,1 +1,504 @@
-<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BOTPEMULA - Home</title><link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" /><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:Arial,sans-serif;background-color:#121212;color:#fff;display:flex;flex-direction:column;justify-content:space-between;min-height:100vh}header{position:fixed;top:0;left:0;width:100%;padding:20px;text-align:center;background-color:#1c1c1c;z-index:1000}header h1{color:#03fcf4;font-size:40px;z-index:1}header::before{content:'';position:absolute;top:0;left:0;width:100%;height:70%;background:linear-gradient(90deg,#03fcf4,#03d3fc,#0000ff,#a103fc,#a103fc,#0000ff,#03d3fc,#03d3fc);background-size:300% 100%;animation:rgb-background 15s infinite linear;filter:blur(25px);z-index:-1}nav{position:fixed;top:60px;left:0;width:100%;background-color:#1c1c1c;padding:10px;z-index:999;display:flex;justify-content:center}nav a{color:#03fcf4;text-decoration:none;padding:10px 20px;font-size:18px;margin:0 15px;transition:background-color 0.3s}nav a:hover{background-color:#03fcf4;color:#000}.main-content{flex-grow:1;padding:20px;text-align:center;margin-top:120px;max-width:95%;margin-left:auto;margin-right:auto}.content-installation{text-align:left;margin:20px;padding:10px;background-color:#1c1c1c;border-radius:8px}.content-installation h2{font-size:24px;margin-bottom:10px}.content-installation p{font-size:16px;margin-bottom:10px}.content-installation a{color:#03fcf4;text-decoration:none;font-weight:700;transition:0.3s}.content-installation a:hover{color:#03d3fc}.social-media{display:flex;justify-content:center;gap:10px;margin-top:0}.social-btn{padding:10px 20px;color:grey;text-decoration:none;background-color:#fff0;border:2px solid #fff0;border-radius:6px;position:relative;overflow:hidden;width:100px;height:40px;display:flex;justify-content:center;align-items:center;font-size:20px;transition:0s;outline:none!important;box-shadow:none!important;-webkit-tap-highlight-color:#fff0}*:focus{outline:none!important;box-shadow:none!important}.social-btn::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;border:10px solid #fff0;border-radius:5px;box-sizing:border-box;background:linear-gradient(25deg,#03fcf4,#03d3fc,#0000ff,#a103fc,#a103fc,#0000ff,#03d3fc,#03d3fc);background-size:300% 100%;animation:rgb-border 15s infinite linear;filter:blur(25px);z-index:-1}footer{position:relative;padding:10px;text-align:center;overflow:hidden}footer::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,#03fcf4,#03d3fc,#0000ff,#a103fc,#a103fc,#0000ff,#03d3fc,#03d3fc);background-size:300% 100%;animation:rgb-background 15s infinite linear;filter:blur(40px);z-index:-1}footer p{position:relative;color:gray;font-size:16px;z-index:1}.scrollable-code{max-height:300px;overflow-y:auto;border:2px solid #444;padding:10px;background-color:#2d2d2d;border-radius:5px}@media (max-width:600px){.main-content{padding:15px;max-width:100%}@keyframes rgb-background{0%{background-position:300% 0}100%{background-position:0 0}}@keyframes rgb-border{0%{background-position:300% 0}100%{background-position:0 0}}@media (max-width:600px){.main-content{padding:15px;max-width:100%}header h1{font-size:30px}nav a{font-size:16px;padding:8px 16px}.content-installation h2{font-size:20px}.content-installation p{font-size:14px}.social-btn{font-size:16px;width:80px;height:35px}footer p{font-size:14px}}</style></head><body><header><h1>BOTPEMULA</h1></header><nav><a href="index">Home</a><a href="about">About</a><a href="minify">Minify</a></nav><div class="main-content"><div class="content-installation"><h2>PHP Class</h2><div class="scrollable-code"><pre class="line-numbers"><code class="language-javascript">&lt;?php class botpemula{private $cookie;private $useragent;public function __construct(){$this->useragent='Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:40.0)';$this->cookie=''}private function requestHeaders($method='GET'){$headers=['user-agent: ' . $this->useragent,'cookie: ' . $this->cookie,];if ($method=='POST'){$headers[]='content-type: application/x-www-form-urlencoded';$headers[]='user-agent: ' . $this->useragent;$headers[]='cookie: ' . $this->cookie}return $headers}}?&gt;</code></pre></div></div><!-- Media Social --><div class="social-media"><a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a><a href="https://m.youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" tabindex="-1" id="youtube">YouTube</a><a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a></div><!-- Menyembunyikan Header --><div class="content-installation"><h2>Sembunyikan Header</h2><p>Untuk menghindari deteksi multi-akun dan penggunaan proxy dalam skrip PHP Anda,terdapat beberapa langkah yang bisa Anda coba. Namun,perlu diingat bahwa ini bukanlah solusi yang 100% pasti menghindari deteksi,karena banyak situs yang memiliki sistem pendeteksian yang sangat canggih dan dapat mendeteksi pola-pola tertentu.Berikut adalah beberapa langkah yang dapat Anda coba untuk menyembunyikan penggunaan proxy dan multi-akun:<p></p>1. Menggunakan Proxy Rotator (Rotasi Proxy).<br>Jika Anda menggunakan proxy,pastikan Anda menggunakan proxy yang berganti secara otomatis untuk setiap permintaan. Ini dapat mengurangi kemungkinan deteksi jika hanya satu IP yang digunakan terus-menerus.<p>Gunakan layanan rotasi proxy (misalnya,ProxyMesh atau Smartproxy). Menggunakan proxy dengan IP yang berasal dari Indonesia,atau negara yang sesuai dengan situs yang Anda tuju.<br>Contoh dibawah ini penggunaan proxy yang lebih fleksibel dalam cURL:</p><h2></h2><div class="scrollable-code"><pre class="line-numbers"><code class="language-javascript">&lt;?php $proxyList=['proxy1:port','proxy2:port','proxy3:port',];$randomProxy=$proxyList[array_rand($proxyList)];$curl=curl_init();curl_setopt($curl,CURLOPT_URL,$url);curl_setopt($curl,CURLOPT_RETURNTRANSFER,true);curl_setopt($curl,CURLOPT_PROXY,$randomProxy);curl_setopt($curl,CURLOPT_PROXYTYPE,CURLPROXY_HTTP);?&gt;</code></pre></div><p><p>2. Mengganti User-Agent dan Headers.<br>Bergantung pada situs yang Anda tuju,penggunaan user-agent yang berbeda bisa membantu menghindari deteksi. Anda bisa merotasi user-agent dan header lainnya untuk meniru perilaku pengguna biasa.<br>Contoh rotasi user-agent:</p></p><h2></h2><div class="scrollable-code"><pre class="line-numbers"><code class="language-javascript">&lt;?php $userAgents=['Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0','Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0'];$randomUserAgent=$userAgents[array_rand($userAgents)];// Pilih User-Agent secara acak $headers=['User-Agent: ' . $randomUserAgent,'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7','Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',];$curl=curl_init();curl_setopt($curl,CURLOPT_HTTPHEADER,$headers);?&gt;</code></pre></div><p><p>3. Menggunakan VPN dengan IP Lokal.<br>Jika situs mendeteksi penggunaan proxy,Anda mungkin perlu mempertimbangkan untuk menggunakan VPN yang memiliki server di Indonesia. Dengan menggunakan VPN,Anda akan memiliki IP lokal yang lebih mirip dengan pengguna asli.<p></p>4. Menyembunyikan Jejak Cookie dan Cache.<br>Saat menggunakan proxy atau VPN,pastikan Anda juga memperhatikan cookie dan cache yang digunakan pada permintaan. untuk menyimpan dan memuat cookie agar situs tidak mendeteksi aktivitas yang mencurigakan.<br>Gunakan metode seperti:</p></p><h2></h2><div class="scrollable-code"><pre class="line-numbers"><code class="language-javascript">&lt;?php $curl=curl_init();curl_setopt($curl,CURLOPT_COOKIEJAR,'cookies.txt');curl_setopt($curl,CURLOPT_COOKIEFILE,'cookies.txt');?&gt;</code></pre></div><p><p>5. Menghindari Penggunaan IP yang Teridentifikasi.<br>Jika IP Anda sudah terdeteksi sebelumnya,jangan gunakan IP yang sama. Rotasi IP secara teratur jika memungkinkan.<p></p>6. Menggunakan Captcha Solver (Jika diperlukan).<br>Beberapa situs mungkin menggunakan Captcha untuk mencegah bot. Jika Anda menggunakan bot untuk mengklaim atau mengakses situs secara otomatis,Anda mungkin perlu menggunakan layanan captcha solver (misalnya 2Captcha) untuk menyelesaikan captcha secara otomatis.<p></p>7. Jangan Terlalu Cepat dalam Mengirimkan Permintaan.<br>Mengirimkan permintaan terlalu cepat dapat membuat sistem mendeteksi bahwa ini adalah aktivitas bot. Pastikan Anda memberikan jeda waktu yang cukup di antara setiap permintaan,misalnya dengan menggunakan sleep() dalam skrip.<br>Menambahkan delay agar tidak terlihat seperti bot. Delay antara 3 sampai 7 detik. </p></p><h2></h2><div class="scrollable-code"><pre class="line-numbers"><code class="language-javascript">&lt;?php sleep(rand(3,7));?&gt;</code></pre></div><p><p>8. Penyembunyian Jejak Header.<br>Selain mengubah User-Agent,Anda juga dapat memodifikasi header lainnya untuk meniru perilaku pengguna manusia misalnya seperti ini. </p></p><h2></h2><div class="scrollable-code"><pre class="line-numbers"><code class="language-javascript">&lt;?php $headers=['User-Agent: ' . $randomUserAgent,'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8','Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7','Connection: keep-alive','Upgrade-Insecure-Requests: 1','Cache-Control: max-age=0',];?&gt;</code></pre></div><p><p>9. Analisa Waktu Aktivitas.<br>Aktivitas Anda di situs harus terlihat alami. Misalnya,jangan terlalu sering melakukan permintaan atau klaim. Berdasarkan waktu dan pola akses,situs dapat mendeteksi aktivitas yang tidak biasa jika terjadi terlalu sering.<p></p>10. Hati-hati dengan Deteksi Multi-Akun<br>Jika situs memiliki mekanisme deteksi multi-akun (seperti memeriksa alamat IP yang sama digunakan oleh beberapa akun),pastikan untuk menggunakan akun yang berbeda secara terpisah. Anda mungkin perlu menggunakan IP yang berbeda atau menggunakan rotasi akun secara acak.<p></p>Kesimpulan<p></p>Untuk menghindari deteksi multi-akun dan proxy dalam skrip Anda,Anda perlu memperhatikan hal-hal berikut:<br>Rotasi Proxy dan VPN dengan IP lokal.Rotasi User-Agent dan penggunaan header yang bervariasi.>Menghindari aktivitas yang terlalu cepat dan menggunakan CAPTCHA solver jika diperlukan.Gunakan proxy yang dapat dipercaya dan rotasi IP secara teratur.Namun,perlu diingat bahwa situs yang memiliki deteksi canggih mungkin masih bisa mendeteksi pola yang tidak biasa. Jika Anda terus-menerus menggunakan metode otomatis,kemungkinan akan terdeteksi seiring waktu. </p></p></div><!-- ROM Installation Content --><div class="content-installation"><h2>Install Resurrection Remix Oppo A37F</h2><p>How to install Resurrection Remix ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F,you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it,you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p><a href="https://youtu.be/RgOTOuzMXtw?si=0Ew6W21k_ySGvjoU" target="_blank">Watch Video</a></div><div class="content-installation"><h2>Install Android 12 Oppo A37F</h2><p>How to install Android 12 ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F,you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it,you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p><a href="https://youtu.be/ZDLjANGWRFA?si=CzIuPGzFC-JteZIA" target="_blank">Watch Video</a></div><div class="content-installation"><h2>Install Potato OS Oppo A37F</h2><p>How to install Potato OS ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F,you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it,you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p><a href="https://youtu.be/kMDdF7frBM8?si=kruS9NueXb0v5eKB" target="_blank">Watch Video</a></div><div class="content-installation"><h2>Install Ancient OS Weaboo Oppo A37F</h2><p>How to install Ancient OS Weaboo ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F,you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it,you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p><a href="https://youtu.be/wbjSwplzGWs?si=EOsV1hAcKCtZHpjZ" target="_blank">Watch Video</a></div><!-- Media Social --><div class="social-media"><a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a><a href="https://m.youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" tabindex="-1" id="youtube">YouTube</a><a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a></div></div><footer><p>&copy;2024 BOTPEMULA | All rights reserved.</p></footer></body></html>
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOTPEMULA - Home</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100vh;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background-color: #1c1c1c;
+      z-index: 1000;
+    }
+
+    header h1 {
+      color: #03fcf4;
+      font-size: 40px;
+      z-index: 1;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70%;
+      background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+      background-size: 300% 100%;
+      animation: rgb-background 15s infinite linear;
+      filter: blur(25px);
+      z-index: -1;
+    }
+
+    nav {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #1c1c1c;
+      padding: 10px;
+      z-index: 999;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: #03fcf4;
+      text-decoration: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      margin: 0 15px;
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #03fcf4;
+      color: black;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      text-align: center;
+      margin-top: 120px;
+      max-width: 95%; /* Allows content to be a bit wider on mobile */
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .content-installation {
+      text-align: left;
+      margin: 20px;
+      padding: 10px;
+      background-color: #1c1c1c;
+      border-radius: 8px;
+    }
+
+    .content-installation h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .content-installation p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .content-installation a {
+      color: #03fcf4;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .content-installation a:hover {
+      color: #03d3fc;
+    }
+
+    .social-media {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 0px;
+    }
+
+    .social-btn {
+      padding: 10px 20px;
+      color: grey;
+      text-decoration: none;
+      background-color: transparent;
+      border: 2px solid transparent;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+      width: 100px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      transition: 0s;
+      outline: none !important;
+      box-shadow: none !important;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    *:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    .social-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 10px solid transparent;
+      border-radius: 5px;
+      box-sizing: border-box;
+      background: linear-gradient(25deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+      background-size: 300% 100%;
+      animation: rgb-border 15s infinite linear;
+      filter: blur(25px);
+      z-index: -1;
+    }
+
+    footer {
+      position: relative;
+      padding: 10px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+      background-size: 300% 100%;
+      animation: rgb-background 15s infinite linear;
+      filter: blur(40px);
+      z-index: -1;
+    }
+
+    footer p {
+      position: relative;
+      color: gray;
+      font-size: 16px;
+      z-index: 1;
+    }
+
+    .scrollable-code {
+      max-height: 300px;
+      overflow-y: auto;
+      border: 2px solid #444;
+      padding: 10px;
+      background-color: #2d2d2d;
+      border-radius: 5px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+      .main-content {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    @keyframes rgb-background {
+      0% {
+        background-position: 300% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    @keyframes rgb-border {
+      0% {
+        background-position: 300% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 600px) {
+      .main-content {
+        padding: 15px;
+        max-width: 100%;
+      }
+
+      header h1 {
+        font-size: 30px;
+      }
+
+      nav a {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+
+      .content-installation h2 {
+        font-size: 20px;
+      }
+
+      .content-installation p {
+        font-size: 14px;
+      }
+
+      .social-btn {
+        font-size: 16px;
+        width: 80px;
+        height: 35px;
+      }
+
+      footer p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>BOTPEMULA</h1>
+  </header>
+  
+  <nav>
+    <a href="index">Home</a>
+    <a href="about">About</a>
+    <a href="minify">Minify</a>
+  </nav>
+
+
+  <div class="main-content">
+    <div class="content-installation">
+      <h2>PHP Class</h2>
+      <div class="scrollable-code">
+        <pre class="line-numbers">
+          <code class="language-javascript">
+&lt;?php
+
+class botpemula
+{
+    private $cookie;
+    private $useragent;
+
+    public function __construct()
+    {
+        $this->useragent = 'Mozilla/5.0 (X11; Ubuntu; Linux i686; rv:40.0)';
+        $this->cookie = '';
+    }
+
+    private function requestHeaders($method = 'GET')
+    {
+        $headers = [
+            'user-agent: ' . $this->useragent,
+            'cookie: ' . $this->cookie,
+        ];
+
+        if ($method == 'POST')
+        {
+            $headers[] = 'content-type: application/x-www-form-urlencoded';
+            $headers[] = 'user-agent: ' . $this->useragent;
+            $headers[] = 'cookie: ' . $this->cookie;
+        }
+
+        return $headers;
+    }
+}
+
+?&gt;
+          </code>
+        </pre>
+      </div>
+    </div>
+    
+    <!-- Media Social -->
+    <div class="social-media">
+      <a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a>
+      <a href="https://m.youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" tabindex="-1" id="youtube">YouTube</a>
+      <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
+    </div>
+    
+    <!-- Menyembunyikan Header -->
+    <div class="content-installation">
+      <h2>Sembunyikan Header</h2>
+      <p>Untuk menghindari deteksi multi-akun dan penggunaan proxy dalam skrip PHP Anda, terdapat beberapa langkah yang bisa Anda coba. Namun, perlu diingat bahwa ini bukanlah solusi yang 100% pasti menghindari deteksi, karena banyak situs yang memiliki sistem pendeteksian yang sangat canggih dan dapat mendeteksi pola-pola tertentu.Berikut adalah beberapa langkah yang dapat Anda coba untuk menyembunyikan penggunaan proxy dan multi-akun:<p></p>1. Menggunakan Proxy Rotator (Rotasi Proxy).<br>Jika Anda menggunakan proxy, pastikan Anda menggunakan proxy yang berganti secara otomatis untuk setiap permintaan. Ini dapat mengurangi kemungkinan deteksi jika hanya satu IP yang digunakan terus-menerus.<p>Gunakan layanan rotasi proxy (misalnya, ProxyMesh atau Smartproxy). Menggunakan proxy dengan IP yang berasal dari Indonesia, atau negara yang sesuai dengan situs yang Anda tuju.<br>Contoh dibawah ini penggunaan proxy yang lebih fleksibel dalam cURL:
+      </p>
+      <h2> </h2>
+      <div class="scrollable-code">
+        <pre class="line-numbers">
+          <code class="language-javascript">
+&lt;?php
+
+$proxyList = [
+    'proxy1:port', 
+    'proxy2:port', 
+    'proxy3:port',
+];
+
+$randomProxy = $proxyList[array_rand($proxyList)]; 
+
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, $url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($curl, CURLOPT_PROXY, $randomProxy);
+curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+
+?&gt;
+          </code>
+        </pre>
+      </div>
+      <p>
+          <p>
+              2. Mengganti User-Agent dan Headers.<br>Bergantung pada situs yang Anda tuju, penggunaan user-agent yang berbeda bisa membantu menghindari deteksi. Anda bisa merotasi user-agent dan header lainnya untuk meniru perilaku pengguna biasa.<br>Contoh rotasi user-agent:
+          </p>
+      </p>
+      <h2> </h2>
+      <div class="scrollable-code">
+        <pre class="line-numbers">
+          <code class="language-javascript">
+&lt;?php
+
+$userAgents = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+    'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.0',
+    'Mozilla/5.0 (Windows NT 6.3; rv:36.0) Gecko/20100101 Firefox/36.0'
+];
+
+$randomUserAgent = $userAgents[array_rand($userAgents)];  // Pilih User-Agent secara acak
+
+$headers = [
+    'User-Agent: ' . $randomUserAgent,
+    'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
+];
+
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+
+?&gt;
+          </code>
+        </pre>
+      </div>
+      <p>
+          <p>
+              3. Menggunakan VPN dengan IP Lokal.<br>Jika situs mendeteksi penggunaan proxy, Anda mungkin perlu mempertimbangkan untuk menggunakan VPN yang memiliki server di Indonesia. Dengan menggunakan VPN, Anda akan memiliki IP lokal yang lebih mirip dengan pengguna asli.<p></p>4. Menyembunyikan Jejak Cookie dan Cache.<br>Saat menggunakan proxy atau VPN, pastikan Anda juga memperhatikan cookie dan cache yang digunakan pada permintaan. untuk menyimpan dan memuat cookie agar situs tidak mendeteksi aktivitas yang mencurigakan.<br>Gunakan metode seperti:
+
+          </p>
+      </p>
+      <h2> </h2>
+      <div class="scrollable-code">
+        <pre class="line-numbers">
+          <code class="language-javascript">
+&lt;?php
+
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_COOKIEJAR, 'cookies.txt');
+curl_setopt($curl, CURLOPT_COOKIEFILE, 'cookies.txt');
+
+?&gt;
+          </code>
+        </pre>
+      </div>
+      <p>
+          <p>
+              5. Menghindari Penggunaan IP yang Teridentifikasi.<br>Jika IP Anda sudah terdeteksi sebelumnya, jangan gunakan IP yang sama. Rotasi IP secara teratur jika memungkinkan.<p></p>6. Menggunakan Captcha Solver (Jika diperlukan).<br>Beberapa situs mungkin menggunakan Captcha untuk mencegah bot. Jika Anda menggunakan bot untuk mengklaim atau mengakses situs secara otomatis, Anda mungkin perlu menggunakan layanan captcha solver (misalnya 2Captcha) untuk menyelesaikan captcha secara otomatis.<p></p>7. Jangan Terlalu Cepat dalam Mengirimkan Permintaan.<br>Mengirimkan permintaan terlalu cepat dapat membuat sistem mendeteksi bahwa ini adalah aktivitas bot. Pastikan Anda memberikan jeda waktu yang cukup di antara setiap permintaan, misalnya dengan menggunakan sleep() dalam skrip.<br>Menambahkan delay agar tidak terlihat seperti bot. Delay antara 3 sampai 7 detik.
+          </p>
+      </p>
+      <h2> </h2>
+      <div class="scrollable-code">
+        <pre class="line-numbers">
+          <code class="language-javascript">
+&lt;?php
+
+sleep(rand(3, 7));
+
+?&gt;
+          </code>
+        </pre>
+      </div>
+      <p>
+          <p>
+              8. Penyembunyian Jejak Header.<br>Selain mengubah User-Agent, Anda juga dapat memodifikasi header lainnya untuk meniru perilaku pengguna manusia misalnya seperti ini.
+          </p>
+      </p>
+      <h2> </h2>
+      <div class="scrollable-code">
+        <pre class="line-numbers">
+          <code class="language-javascript">
+&lt;?php
+
+$headers = [
+    'User-Agent: ' . $randomUserAgent,
+    'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language: id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7',
+    'Connection: keep-alive',
+    'Upgrade-Insecure-Requests: 1',
+    'Cache-Control: max-age=0',
+];
+
+?&gt;
+          </code>
+        </pre>
+      </div>
+      <p>
+          <p>
+              9. Analisa Waktu Aktivitas.<br>Aktivitas Anda di situs harus terlihat alami. Misalnya, jangan terlalu sering melakukan permintaan atau klaim. Berdasarkan waktu dan pola akses, situs dapat mendeteksi aktivitas yang tidak biasa jika terjadi terlalu sering.<p></p>10. Hati-hati dengan Deteksi Multi-Akun<br>Jika situs memiliki mekanisme deteksi multi-akun (seperti memeriksa alamat IP yang sama digunakan oleh beberapa akun), pastikan untuk menggunakan akun yang berbeda secara terpisah. Anda mungkin perlu menggunakan IP yang berbeda atau menggunakan rotasi akun secara acak.<p></p>Kesimpulan<p></p>Untuk menghindari deteksi multi-akun dan proxy dalam skrip Anda, Anda perlu memperhatikan hal-hal berikut:<br>Rotasi Proxy dan VPN dengan IP lokal.Rotasi User-Agent dan penggunaan header yang bervariasi.>Menghindari aktivitas yang terlalu cepat dan menggunakan CAPTCHA solver jika diperlukan.Gunakan proxy yang dapat dipercaya dan rotasi IP secara teratur.Namun, perlu diingat bahwa situs yang memiliki deteksi canggih mungkin masih bisa mendeteksi pola yang tidak biasa. Jika Anda terus-menerus menggunakan metode otomatis, kemungkinan akan terdeteksi seiring waktu.
+          </p>
+      </p>
+    </div>
+
+    <!-- ROM Installation Content -->
+    <div class="content-installation">
+      <h2>Install Resurrection Remix Oppo A37F</h2>
+      <p>How to install Resurrection Remix ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
+      <a href="https://youtu.be/RgOTOuzMXtw?si=0Ew6W21k_ySGvjoU" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="content-installation">
+      <h2>Install Android 12 Oppo A37F</h2>
+      <p>How to install Android 12 ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
+      <a href="https://youtu.be/ZDLjANGWRFA?si=CzIuPGzFC-JteZIA" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="content-installation">
+      <h2>Install Potato OS Oppo A37F</h2>
+      <p>How to install Potato OS ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
+      <a href="https://youtu.be/kMDdF7frBM8?si=kruS9NueXb0v5eKB" target="_blank">Watch Video</a>
+    </div>
+
+    <div class="content-installation">
+      <h2>Install Ancient OS Weaboo Oppo A37F</h2>
+      <p>How to install Ancient OS Weaboo ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
+      <a href="https://youtu.be/wbjSwplzGWs?si=EOsV1hAcKCtZHpjZ" target="_blank">Watch Video</a>
+    </div>
+    
+    <!-- Media Social -->
+    <div class="social-media">
+      <a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a>
+      <a href="https://m.youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" tabindex="-1" id="youtube">YouTube</a>
+      <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 BOTPEMULA | All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
