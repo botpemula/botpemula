@@ -37,7 +37,8 @@
     }
 
     header h1 {
-      color: #03fcf4;
+      /*color: #03fcf4;*/
+      color: white;
       font-size: 40px;
       z-index: 1;
     }
@@ -48,10 +49,10 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 70%;
-      background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
-      background-size: 300% 100%;
-      animation: rgb-background 15s infinite linear;
+      height: 90%;
+      background: linear-gradient(100deg, #03fcf4, #03d3fc, #03d3fc, #0000ff, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
+      background-size: 500% 100%;
+      animation: rgb-background 20s infinite linear;
       filter: blur(25px);
       z-index: -1;
     }
@@ -164,9 +165,9 @@
       border: 10px solid transparent;
       border-radius: 5px;
       box-sizing: border-box;
-      background: linear-gradient(25deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
-      background-size: 300% 100%;
-      animation: rgb-border 15s infinite linear;
+      background: linear-gradient(100deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
+      background-size: 500% 100%;
+      animation: rgb-border 20s infinite linear;
       filter: blur(25px);
       z-index: -1;
     }
@@ -185,9 +186,9 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
-      background-size: 300% 100%;
-      animation: rgb-background 15s infinite linear;
+      background: linear-gradient(100deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
+      background-size: 500% 100%;
+      animation: rgb-background 20s infinite linear;
       filter: blur(40px);
       z-index: -1;
     }
@@ -200,12 +201,29 @@
     }
 
     .scrollable-code {
-      max-height: 300px;
-      overflow-y: auto;
-      border: 2px solid #444;
-      padding: 10px;
-      background-color: #2d2d2d;
-      border-radius: 5px;
+      /*max-height: 300px;*/
+      max-height: auto;
+      overflow: none;
+      /*overflow: auto;*/
+      border: 0px solid #1c1c1c;
+      padding-left: 2px;
+      padding-right: 2px;
+      padding-top: 0.05px;
+      padding-bottom: 0.05px;
+      background-color: ;
+      border-radius: 10px;
+      /*
+      background: linear-gradient(100deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
+      background-size: 500% 100%;
+      animation: rgb-background 20s infinite linear;
+      /*filter: blur(40px);*/
+      
+      z-index: 0;
+      box-sizing: border-box;
+    }
+
+    .scrollable-code pre code {
+      font-size: 11px;  /* Reduce font size */
     }
     
     /* Responsive Design */
@@ -309,14 +327,14 @@ class botpemula
             'user-agent: ' . $this->useragent,
             'cookie: ' . $this->cookie,
         ];
-
+        
         if ($method == 'POST')
         {
             $headers[] = 'content-type: application/x-www-form-urlencoded';
             $headers[] = 'user-agent: ' . $this->useragent;
             $headers[] = 'cookie: ' . $this->cookie;
         }
-
+        
         return $headers;
     }
 }
@@ -463,7 +481,10 @@ $headers = [
       </p>
     </div>
 
+
     <!-- ROM Installation Content -->
+    <!-- 
+
     <div class="content-installation">
       <h2>Install Resurrection Remix Oppo A37F</h2>
       <p>How to install Resurrection Remix ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
@@ -487,6 +508,8 @@ $headers = [
       <p>How to install Ancient OS Weaboo ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
       <a href="https://youtu.be/wbjSwplzGWs?si=EOsV1hAcKCtZHpjZ" target="_blank">Watch Video</a>
     </div>
+    
+    -->
     
     <!-- Media Social -->
     <div class="social-media">
