@@ -37,8 +37,8 @@
     }
 
     header h1 {
+      color: lightgray;
       /*color: #03fcf4;*/
-      color: white;
       font-size: 40px;
       z-index: 1;
     }
@@ -50,10 +50,10 @@
       left: 0;
       width: 100%;
       height: 90%;
-      background: linear-gradient(100deg, #03fcf4, #03d3fc, #03d3fc, #0000ff, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
-      background-size: 500% 100%;
+      background: linear-gradient(100deg, blue, purple, blue);
+      background-size: 300% 100%;
       animation: rgb-background 20s infinite linear;
-      filter: blur(25px);
+      /*filter: blur(40px);*/
       z-index: -1;
     }
 
@@ -70,7 +70,8 @@
     }
 
     nav a {
-      color: #03fcf4;
+      color: lightgray;
+      /*color: #03fcf4;*/
       text-decoration: none;
       padding: 10px 20px;
       font-size: 18px;
@@ -85,7 +86,7 @@
 
     .main-content {
       flex-grow: 1;
-      padding: 20px;
+      padding: 10px;
       text-align: center;
       margin-top: 120px;
       max-width: 95%; /* Allows content to be a bit wider on mobile */
@@ -96,19 +97,23 @@
     .content-installation {
       text-align: left;
       margin: 20px;
+      margin-left: 5px; /* ukuran konten lebar ke kiri */
+      margin-right: 5px; /* ukuran konten lebar ke kanan */
       padding: 10px;
       background-color: #1c1c1c;
       border-radius: 8px;
     }
 
     .content-installation h2 {
-      font-size: 24px;
+      font-size: 20px;
       margin-bottom: 10px;
+      color: lightgray;
     }
 
     .content-installation p {
-      font-size: 16px;
+      font-size: 12px;
       margin-bottom: 10px;
+      color: lightgray;
     }
 
     .content-installation a {
@@ -131,7 +136,7 @@
 
     .social-btn {
       padding: 10px 20px;
-      color: grey;
+      color: lightgray;
       text-decoration: none;
       background-color: transparent;
       border: 2px solid transparent;
@@ -165,10 +170,10 @@
       border: 10px solid transparent;
       border-radius: 5px;
       box-sizing: border-box;
-      background: linear-gradient(100deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
-      background-size: 500% 100%;
+      background: linear-gradient(100deg, blue, purple, blue);
+      background-size: 300% 100%;
       animation: rgb-border 20s infinite linear;
-      filter: blur(25px);
+     /* filter: blur(25px);*/
       z-index: -1;
     }
 
@@ -186,16 +191,16 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(100deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
-      background-size: 500% 100%;
+      background: linear-gradient(100deg, blue, purple, blue);
+      background-size: 300% 100%;
       animation: rgb-background 20s infinite linear;
-      filter: blur(40px);
+      /*filter: blur(40px);*/
       z-index: -1;
     }
 
     footer p {
       position: relative;
-      color: gray;
+      color: lightgray;
       font-size: 16px;
       z-index: 1;
     }
@@ -213,17 +218,16 @@
       background-color: ;
       border-radius: 10px;
       /*
-      background: linear-gradient(100deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03fcf4);
-      background-size: 500% 100%;
+      background: linear-gradient(100deg, blue, purple, blue);
+      background-size: 300% 100%;
       animation: rgb-background 20s infinite linear;
-      /*filter: blur(40px);*/
-      
+      filter: blur(40px);*/
       z-index: 0;
       box-sizing: border-box;
     }
 
     .scrollable-code pre code {
-      font-size: 11px;  /* Reduce font size */
+      font-size: 12px;  /* Reduce font size */
     }
     
     /* Responsive Design */
@@ -292,7 +296,7 @@
 
 <body>
   <header>
-    <h1>BOTPEMULA</h1>
+    <h1>THE REAL OF BOTPEMULA</h1>
   </header>
   
   <nav>
@@ -304,7 +308,7 @@
 
   <div class="main-content">
     <div class="content-installation">
-      <h2>PHP Class</h2>
+      <h2></h2>
       <div class="scrollable-code">
         <pre class="line-numbers">
           <code class="language-javascript">
@@ -344,18 +348,17 @@ class botpemula
         </pre>
       </div>
     </div>
-    
     <!-- Media Social -->
     <div class="social-media">
       <a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a>
       <a href="https://m.youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" tabindex="-1" id="youtube">YouTube</a>
+      <a href="#" class="social-btn" tabindex="-1" id="tiktok">Tiktok</a>
       <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
     </div>
-    
     <!-- Menyembunyikan Header -->
     <div class="content-installation">
       <h2>Sembunyikan Header</h2>
-      <p>Untuk menghindari deteksi multi-akun dan penggunaan proxy dalam skrip PHP Anda, terdapat beberapa langkah yang bisa Anda coba. Namun, perlu diingat bahwa ini bukanlah solusi yang 100% pasti menghindari deteksi, karena banyak situs yang memiliki sistem pendeteksian yang sangat canggih dan dapat mendeteksi pola-pola tertentu.Berikut adalah beberapa langkah yang dapat Anda coba untuk menyembunyikan penggunaan proxy dan multi-akun:<p></p>1. Menggunakan Proxy Rotator (Rotasi Proxy).<br>Jika Anda menggunakan proxy, pastikan Anda menggunakan proxy yang berganti secara otomatis untuk setiap permintaan. Ini dapat mengurangi kemungkinan deteksi jika hanya satu IP yang digunakan terus-menerus.<p>Gunakan layanan rotasi proxy (misalnya, ProxyMesh atau Smartproxy). Menggunakan proxy dengan IP yang berasal dari Indonesia, atau negara yang sesuai dengan situs yang Anda tuju.<br>Contoh dibawah ini penggunaan proxy yang lebih fleksibel dalam cURL:
+      <p>Untuk menghindari deteksi multi-akun dan penggunaan proxy dalam skrip PHP Anda, terdapat beberapa langkah yang bisa Anda coba. Namun, perlu diingat bahwa ini bukanlah solusi yang 100% pasti menghindari deteksi, karena banyak situs yang memiliki sistem pendeteksian yang sangat canggih dan dapat mendeteksi pola-pola tertentu.Berikut adalah beberapa langkah yang dapat Anda coba untuk menyembunyikan penggunaan proxy dan multi-akun:<p>1. Menggunakan Proxy Rotator (Rotasi Proxy). Jika Anda menggunakan proxy, pastikan Anda menggunakan proxy yang berganti secara otomatis untuk setiap permintaan. Ini dapat mengurangi kemungkinan deteksi jika hanya satu IP yang digunakan terus-menerus.Gunakan layanan rotasi proxy (misalnya, ProxyMesh atau Smartproxy). Menggunakan proxy dengan IP yang berasal dari Indonesia, atau negara yang sesuai dengan situs yang Anda tuju. Contoh dibawah ini penggunaan proxy yang lebih fleksibel dalam cURL:
       </p>
       <h2> </h2>
       <div class="scrollable-code">
@@ -383,7 +386,7 @@ curl_setopt($curl, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
       </div>
       <p>
           <p>
-              2. Mengganti User-Agent dan Headers.<br>Bergantung pada situs yang Anda tuju, penggunaan user-agent yang berbeda bisa membantu menghindari deteksi. Anda bisa merotasi user-agent dan header lainnya untuk meniru perilaku pengguna biasa.<br>Contoh rotasi user-agent:
+              2. Mengganti User-Agent dan Headers. Bergantung pada situs yang Anda tuju, penggunaan user-agent yang berbeda bisa membantu menghindari deteksi. Anda bisa merotasi user-agent dan header lainnya untuk meniru perilaku pengguna biasa. Contoh rotasi user-agent:
           </p>
       </p>
       <h2> </h2>
@@ -415,7 +418,7 @@ curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
       </div>
       <p>
           <p>
-              3. Menggunakan VPN dengan IP Lokal.<br>Jika situs mendeteksi penggunaan proxy, Anda mungkin perlu mempertimbangkan untuk menggunakan VPN yang memiliki server di Indonesia. Dengan menggunakan VPN, Anda akan memiliki IP lokal yang lebih mirip dengan pengguna asli.<p></p>4. Menyembunyikan Jejak Cookie dan Cache.<br>Saat menggunakan proxy atau VPN, pastikan Anda juga memperhatikan cookie dan cache yang digunakan pada permintaan. untuk menyimpan dan memuat cookie agar situs tidak mendeteksi aktivitas yang mencurigakan.<br>Gunakan metode seperti:
+              3. Menggunakan VPN dengan IP Lokal. Jika situs mendeteksi penggunaan proxy, Anda mungkin perlu mempertimbangkan untuk menggunakan VPN yang memiliki server di Indonesia. Dengan menggunakan VPN, Anda akan memiliki IP lokal yang lebih mirip dengan pengguna asli.<p>4. Menyembunyikan Jejak Cookie dan Cache.Saat menggunakan proxy atau VPN, pastikan Anda juga memperhatikan cookie dan cache yang digunakan pada permintaan. untuk menyimpan dan memuat cookie agar situs tidak mendeteksi aktivitas yang mencurigakan.Gunakan metode seperti:
 
           </p>
       </p>
@@ -435,7 +438,7 @@ curl_setopt($curl, CURLOPT_COOKIEFILE, 'cookies.txt');
       </div>
       <p>
           <p>
-              5. Menghindari Penggunaan IP yang Teridentifikasi.<br>Jika IP Anda sudah terdeteksi sebelumnya, jangan gunakan IP yang sama. Rotasi IP secara teratur jika memungkinkan.<p></p>6. Menggunakan Captcha Solver (Jika diperlukan).<br>Beberapa situs mungkin menggunakan Captcha untuk mencegah bot. Jika Anda menggunakan bot untuk mengklaim atau mengakses situs secara otomatis, Anda mungkin perlu menggunakan layanan captcha solver (misalnya 2Captcha) untuk menyelesaikan captcha secara otomatis.<p></p>7. Jangan Terlalu Cepat dalam Mengirimkan Permintaan.<br>Mengirimkan permintaan terlalu cepat dapat membuat sistem mendeteksi bahwa ini adalah aktivitas bot. Pastikan Anda memberikan jeda waktu yang cukup di antara setiap permintaan, misalnya dengan menggunakan sleep() dalam skrip.<br>Menambahkan delay agar tidak terlihat seperti bot. Delay antara 3 sampai 7 detik.
+              5. Menghindari Penggunaan IP yang Teridentifikasi. Jika IP Anda sudah terdeteksi sebelumnya, jangan gunakan IP yang sama. Rotasi IP secara teratur jika memungkinkan.<p>6. Menggunakan Captcha Solver (Jika diperlukan). Beberapa situs mungkin menggunakan Captcha untuk mencegah bot. Jika Anda menggunakan bot untuk mengklaim atau mengakses situs secara otomatis, Anda mungkin perlu menggunakan layanan captcha solver (misalnya 2Captcha) untuk menyelesaikan captcha secara otomatis.<p> 7. Jangan Terlalu Cepat dalam Mengirimkan Permintaan.Mengirimkan permintaan terlalu cepat dapat membuat sistem mendeteksi bahwa ini adalah aktivitas bot. Pastikan Anda memberikan jeda waktu yang cukup di antara setiap permintaan, misalnya dengan menggunakan sleep() dalam skrip.Menambahkan delay agar tidak terlihat seperti bot. Delay antara 3 sampai 7 detik.
           </p>
       </p>
       <h2> </h2>
@@ -452,7 +455,7 @@ sleep(rand(3, 7));
       </div>
       <p>
           <p>
-              8. Penyembunyian Jejak Header.<br>Selain mengubah User-Agent, Anda juga dapat memodifikasi header lainnya untuk meniru perilaku pengguna manusia misalnya seperti ini.
+              8. Penyembunyian Jejak Header. Selain mengubah User-Agent, Anda juga dapat memodifikasi header lainnya untuk meniru perilaku pengguna manusia misalnya seperti ini.
           </p>
       </p>
       <h2> </h2>
@@ -476,49 +479,43 @@ $headers = [
       </div>
       <p>
           <p>
-              9. Analisa Waktu Aktivitas.<br>Aktivitas Anda di situs harus terlihat alami. Misalnya, jangan terlalu sering melakukan permintaan atau klaim. Berdasarkan waktu dan pola akses, situs dapat mendeteksi aktivitas yang tidak biasa jika terjadi terlalu sering.<p></p>10. Hati-hati dengan Deteksi Multi-Akun<br>Jika situs memiliki mekanisme deteksi multi-akun (seperti memeriksa alamat IP yang sama digunakan oleh beberapa akun), pastikan untuk menggunakan akun yang berbeda secara terpisah. Anda mungkin perlu menggunakan IP yang berbeda atau menggunakan rotasi akun secara acak.<p></p>Kesimpulan<p></p>Untuk menghindari deteksi multi-akun dan proxy dalam skrip Anda, Anda perlu memperhatikan hal-hal berikut:<br>Rotasi Proxy dan VPN dengan IP lokal.Rotasi User-Agent dan penggunaan header yang bervariasi.>Menghindari aktivitas yang terlalu cepat dan menggunakan CAPTCHA solver jika diperlukan.Gunakan proxy yang dapat dipercaya dan rotasi IP secara teratur.Namun, perlu diingat bahwa situs yang memiliki deteksi canggih mungkin masih bisa mendeteksi pola yang tidak biasa. Jika Anda terus-menerus menggunakan metode otomatis, kemungkinan akan terdeteksi seiring waktu.
+              9. Analisa Waktu Aktivitas. Aktivitas Anda di situs harus terlihat alami. Misalnya, jangan terlalu sering melakukan permintaan atau klaim. Berdasarkan waktu dan pola akses, situs dapat mendeteksi aktivitas yang tidak biasa jika terjadi terlalu sering.<p>10. Hati-hati dengan Deteksi Multi-Akun. Jika situs memiliki mekanisme deteksi multi-akun (seperti memeriksa alamat IP yang sama digunakan oleh beberapa akun), pastikan untuk menggunakan akun yang berbeda secara terpisah. Anda mungkin perlu menggunakan IP yang berbeda atau menggunakan rotasi akun secara acak.<p>Kesimpulan: Untuk menghindari deteksi multi-akun dan proxy dalam skrip Anda, Anda perlu memperhatikan hal-hal berikut: Rotasi Proxy dan VPN dengan IP lokal.Rotasi User-Agent dan penggunaan header yang bervariasi.Menghindari aktivitas yang terlalu cepat dan menggunakan CAPTCHA solver jika diperlukan.Gunakan proxy yang dapat dipercaya dan rotasi IP secara teratur.Namun, perlu diingat bahwa situs yang memiliki deteksi canggih mungkin masih bisa mendeteksi pola yang tidak biasa. Jika Anda terus-menerus menggunakan metode otomatis, kemungkinan akan terdeteksi seiring waktu.
           </p>
       </p>
     </div>
-
-
+    <!-- Related content -->
+    <div class="content-installation">
+        <h2>Diposting Oleh Botpemula</h2>
+    </div>
     <!-- ROM Installation Content -->
-    <!-- 
-
     <div class="content-installation">
       <h2>Install Resurrection Remix Oppo A37F</h2>
-      <p>How to install Resurrection Remix ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
-      <a href="https://youtu.be/RgOTOuzMXtw?si=0Ew6W21k_ySGvjoU" target="_blank">Watch Video</a>
+      <p>Cara install custom rom Resurrection Remix di Oppo A37F.</p>
+      <a href="https://youtu.be/RgOTOuzMXtw?si=0Ew6W21k_ySGvjoU" target="_blank">Video</a>
     </div>
-
     <div class="content-installation">
       <h2>Install Android 12 Oppo A37F</h2>
-      <p>How to install Android 12 ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
-      <a href="https://youtu.be/ZDLjANGWRFA?si=CzIuPGzFC-JteZIA" target="_blank">Watch Video</a>
+      <p>Cara install Android 12 di oppo a37f. Leneage OS Android 12.</p>
+      <a href="https://youtu.be/ZDLjANGWRFA?si=CzIuPGzFC-JteZIA" target="_blank">Video</a>
     </div>
-
     <div class="content-installation">
       <h2>Install Potato OS Oppo A37F</h2>
-      <p>How to install Potato OS ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
-      <a href="https://youtu.be/kMDdF7frBM8?si=kruS9NueXb0v5eKB" target="_blank">Watch Video</a>
+      <p>Cara install custom rom potato os di oppo a37f.</p>
+      <a href="https://youtu.be/kMDdF7frBM8?si=kruS9NueXb0v5eKB" target="_blank">Video</a>
     </div>
-
     <div class="content-installation">
       <h2>Install Ancient OS Weaboo Oppo A37F</h2>
-      <p>How to install Ancient OS Weaboo ROM on Oppo A37F. If you are looking for a custom ROM for your Oppo A37F, you are right to come here. Here I have prepared the tools and ingredients. For how to install and install it, you can watch the video below.<br>Don't forget to subscribe to my channel so you don't miss the latest updates.</p>
-      <a href="https://youtu.be/wbjSwplzGWs?si=EOsV1hAcKCtZHpjZ" target="_blank">Watch Video</a>
+      <p>Cara install custom rom Ancient OS oppo a37f. Rom wibu Android 10.</p>
+      <a href="https://youtu.be/wbjSwplzGWs?si=EOsV1hAcKCtZHpjZ" target="_blank">Video</a>
     </div>
-    
-    -->
-    
     <!-- Media Social -->
     <div class="social-media">
       <a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a>
       <a href="https://m.youtube.com/@aanriski16?si=KHn09T3OZvftU1vO" class="social-btn" tabindex="-1" id="youtube">YouTube</a>
+      <a href="#" class="social-btn" tabindex="-1" id="tiktok">Tiktok</a>
       <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
     </div>
   </div>
-
   <footer>
     <p>&copy; 2024 BOTPEMULA | All rights reserved.</p>
   </footer>
