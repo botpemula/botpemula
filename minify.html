@@ -41,21 +41,22 @@
     }
     
     header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70%;
-  background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
-  background-size: 300% 100%;
-  animation: rgb-background 15s infinite linear;
-  filter: blur(25px);
-  z-index: -1;
-}
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+        background-size: 300% 100%;
+        animation: rgb-background 15s infinite linear;
+        filter: blur(25px);
+        z-index: -1;
+    }
+
     nav {
       position: fixed;
-      top: 60px; /* Positioned below the header */
+      top: 60px;
       left: 0;
       width: 100%;
       background-color: #1c1c1c;
@@ -78,208 +79,206 @@
       background-color: #03fcf4;
       color: black;
     }
-    
-        .main-content {
-            flex-grow: 1;
-            padding: 20px;
-            text-align: center;
-            margin-top: 120px;
-        }
 
-        .content-installation {
-            text-align: left;
-            margin: 20px;
-            padding: 10px;
-            background-color: #1c1c1c;
-            border-radius: 8px;
-        }
+    .main-content {
+        flex-grow: 1;
+        padding: 20px;
+        text-align: center;
+        margin-top: 120px;
+    }
 
-        .content-installation h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
+    .content-installation {
+        text-align: left;
+        margin: 20px;
+        padding: 10px;
+        background-color: #1c1c1c;
+        border-radius: 8px;
+    }
 
-        .content-installation p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
+    .content-installation h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
 
-        .content-installation a {
-            color: #03fcf4;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+    .content-installation p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 
-        .content-installation a:hover {
-            color: #03d3fc;
-        }
+    .content-installation a {
+        color: #03fcf4;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+    }
 
-        h1 {
-            text-align: center;
-            color: #ffffff;
-        }
+    .content-installation a:hover {
+        color: #03d3fc;
+    }
 
-        form {
-            max-width: 600px;
-            margin: auto;
-            background: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        }
+    h1 {
+        text-align: center;
+        color: #ffffff;
+    }
 
-        textarea, select, button {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            background-color: #2c2c2c;
-            color: #e0e0e0;
-            border: 1px solid #444;
-            border-radius: 5px;
-            box-sizing: border-box;
-            outline: none !important;
-        }
+    form {
+        max-width: 600px;
+        margin: auto;
+        background: #1e1e1e;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 
-        textarea {
-            height: 250px;
-            resize: none;
-        }
+    textarea, select, button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        background-color: #2c2c2c;
+        color: #e0e0e0;
+        border: 1px solid #444;
+        border-radius: 5px;
+        box-sizing: border-box;
+        outline: none !important;
+    }
 
-        button:hover {
-            background-color: #3d3d3d;
-            transform: scale(1.05);
-        }
+    textarea {
+        height: 250px;
+        resize: none;
+    }
 
-        .output {
-            margin-top: 30px;
-            background: #2c2c2c;
-            color: #e0e0e0;
-            padding: 15px;
-            border-radius: 5px;
-            width: 100%;
-            height: auto;
-            overflow: auto;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
+    button:hover {
+        background-color: #3d3d3d;
+        transform: scale(1.05);
+    }
 
-        #outputContainer {
-            display: none;
-            max-width: 600px;
-            margin: 20px auto;
-        }
+    .output {
+        margin-top: 30px;
+        background: #2c2c2c;
+        color: #e0e0e0;
+        padding: 15px;
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
 
-        .error {
-            color: #ff5252;
-        }
+    #outputContainer {
+        display: none;
+    }
 
-        .button-container {
-            display: flex;
-            justify-content: space-between;
-        }
+    .error {
+        color: #ff5252;
+    }
 
-        .button-container button {
-            width: 48%;
-        }
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        .social-media {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-        }
+    .button-container button {
+        width: 48%;
+    }
 
-        .social-btn {
-            padding: 10px 20px;
-            color: grey;
-            text-decoration: none;
-            background-color: transparent;
-            border: 2px solid transparent;
-            border-radius: 6px;
-            position: relative;
-            overflow: hidden;
-            width: 100px;
-            height: 40px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            transition: 0s;
-        }
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
 
-        .social-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 10px solid transparent;
-            border-radius: 5px;
-            box-sizing: border-box;
-            background: linear-gradient(25deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
-            background-size: 300% 100%;
-            animation: rgb-border 15s infinite linear;
-            filter: blur(25px);
-            z-index: -1;
-        }
+    .social-btn {
+        padding: 10px 20px;
+        color: grey;
+        text-decoration: none;
+        background-color: transparent;
+        border: 2px solid transparent;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        transition: 0s;
+    }
 
-        footer {
-  position: relative;
-  padding: 10px;
-  text-align: center;
-  overflow: hidden;
-}
+    .social-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid transparent;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background: linear-gradient(25deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+        background-size: 300% 100%;
+        animation: rgb-border 15s infinite linear;
+        filter: blur(25px);
+        z-index: -1;
+    }
 
-footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
-  background-size: 300% 100%;
-  animation: rgb-background 15s infinite linear;
-  filter: blur(40px);
-  z-index: -1;
-}
+    footer {
+        position: relative;
+        padding: 10px;
+        text-align: center;
+        overflow: hidden;
+    }
 
-footer p {
-  position: relative;
-  color: gray;
-  font-size: 16px;
-  z-index: 1;
-}
+    footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #03fcf4, #03d3fc, #0000ff, #a103fc, #a103fc, #0000ff, #03d3fc, #03d3fc);
+        background-size: 300% 100%;
+        animation: rgb-background 15s infinite linear;
+        filter: blur(40px);
+        z-index: -1;
+    }
+
+    footer p {
+        position: relative;
+        color: gray;
+        font-size: 16px;
+        z-index: 1;
+    }
     .scrollable-code {
-      max-height: 300px;
-      overflow-y: auto;
-      border: 2px solid #444;
-      padding: 10px;
-      background-color: #2d2d2d;
-      border-radius: 5px;
+        max-height: 300px;
+        overflow-y: auto;
+        border: 2px solid #444;
+        padding: 10px;
+        background-color: #2d2d2d;
+        border-radius: 5px;
     }
 
     /* Animations */
     @keyframes rgb-background {
-      0% {
-        background-position: 300% 0;
-      }
+        0% {
+            background-position: 300% 0;
+        }
 
-      100% {
-        background-position: 0 0;
-      }
+        100% {
+            background-position: 0 0;
+        }
     }
 
     @keyframes rgb-border {
-      0% {
-        background-position: 300% 0;
-      }
+        0% {
+            background-position: 300% 0;
+        }
 
-      100% {
-        background-position: 0 0;
-      }
+        100% {
+            background-position: 0 0;
+        }
     }
     </style>
 </head>
@@ -289,22 +288,20 @@ footer p {
         <h1>BOTPEMULA</h1>
     </header>
 
-  
-  <nav>
-    <a href="index">Home</a>
-    <a href="about">About</a>
-    <a href="minify">Minify</a>
-  </nav>
-
+    <nav>
+        <a href="index">Home</a>
+        <a href="about">About</a>
+        <a href="minify">Minify</a>
+    </nav>
 
     <div class="main-content">
-        <!-- <h1>Minify</h1> -->
         <form id="minifyForm">
             <label for="code">Minify Code</label>
-            <textarea name="code" id="code" placeholder="Input code.."></textarea>
-            <!-- <label for="type">Choose Code Type</label> -->
-            <select name="type" id="type">
-                <option value="js">All code</option>
+            <textarea name="code" id="code" placeholder="Input code..." oninput="highlightCode()"></textarea>
+            <select name="type" id="type" onchange="highlightCode()">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="json">JSON</option>
                 <option value="js">JavaScript</option>
                 <option value="python">Python</option>
                 <option value="ruby">Ruby</option>
@@ -337,11 +334,20 @@ footer p {
     </footer>
 
     <script>
-        function adjustOutputSize() {
-            const input = document.getElementById('code');
-            const output = document.getElementById('outputContainer');
-            output.style.height = `${input.offsetHeight}px`;
-            output.style.width = `${input.offsetWidth}px`;
+        function highlightCode() {
+            const code = document.getElementById('code').value;
+            const type = document.getElementById('type').value;
+            const minifiedCodeElement = document.getElementById('minifiedCode');
+            const errorElement = document.getElementById('error');
+            const outputContainer = document.getElementById('outputContainer');
+            
+            let languageClass = `language-${type}`;
+            minifiedCodeElement.textContent = code;
+            minifiedCodeElement.className = languageClass;
+
+            Prism.highlightElement(minifiedCodeElement);
+
+            outputContainer.style.display = code.trim() ? 'block' : 'none';
         }
 
         function minifyCode() {
@@ -360,21 +366,27 @@ footer p {
             }
 
             let minifiedCode = '';
-            let languageClass = '';
 
             try {
                 switch (type) {
-                    case 'php':
+                    case 'js':
                         minifiedCode = code.replace(/\/\/.*$/gm, '').replace(/\/\*[\s\S]*?\*\//gm, '').replace(/\s+/g, ' ').trim();
-                        languageClass = 'language-php';
                         break;
                     case 'python':
                     case 'ruby':
-                    case 'js':
+                    case 'php':
                     case 'java':
                     case 'c':
                         minifiedCode = code.replace(/#.*$/gm, '').replace(/\s+/g, ' ').trim();
-                        languageClass = `language-${type}`;
+                        break;
+                    case 'html':
+                        minifiedCode = code.replace(/\s+/g, ' ').trim();
+                        break;
+                    case 'css':
+                        minifiedCode = code.replace(/\s+/g, ' ').trim();
+                        break;
+                    case 'json':
+                        minifiedCode = JSON.stringify(JSON.parse(code));
                         break;
                     default:
                         errorElement.textContent = 'Tipe kode tidak dikenali!';
@@ -387,11 +399,10 @@ footer p {
             }
 
             minifiedCodeElement.textContent = minifiedCode;
-            minifiedCodeElement.className = `language-${languageClass}`;
+            minifiedCodeElement.className = `language-${type}`;
             Prism.highlightElement(minifiedCodeElement);
 
             outputContainer.style.display = 'block';
-            adjustOutputSize();
         }
 
         function copyToClipboard() {
@@ -415,3 +426,4 @@ footer p {
     </script>
 </body>
 </html>
+
