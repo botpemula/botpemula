@@ -9,10 +9,10 @@
   <meta name="author" content="BOTPEMULA">
   <meta property="og:title" content="BOTPEMULA - Home">
   <meta property="og:description" content="BOTPEMULA - A website providing tutorials and tools for web development, programming, and more.">
-  <meta property="og:image" content="URL_of_your_image.jpg"> <!-- Ganti dengan URL gambar asli -->
-  <meta property="og:url" content="https://yourwebsite.com"> <!-- Ganti dengan URL asli -->
+  <meta property="og:image" content="URL_of_your_image.jpg"> <!-- Replace with actual image URL -->
+  <meta property="og:url" content="https://yourwebsite.com"> <!-- Replace with actual URL -->
   <meta property="og:type" content="website">
-
+  
   <title>BOTPEMULA - Home</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
@@ -41,11 +41,12 @@
       padding: 20px;
       text-align: center;
       background-color: #1c1c1c;
-      z-index: 1000;
+      z-index: 1;
     }
 
     header h1 {
       color: lightgray;
+      /*color: #03fcf4;*/
       font-size: 40px;
       z-index: 1;
     }
@@ -60,6 +61,7 @@
       background: linear-gradient(100deg, blue, purple, blue);
       background-size: 300% 100%;
       animation: rgb-background 20s infinite linear;
+      /*filter: blur(40px);*/
       z-index: -1;
     }
 
@@ -70,13 +72,14 @@
       width: 100%;
       background-color: #1c1c1c;
       padding: 10px;
-      z-index: 999;
+      z-index: 1;
       display: flex;
       justify-content: center;
     }
 
     nav a {
       color: lightgray;
+      /*color: #03fcf4;*/
       text-decoration: none;
       padding: 10px 20px;
       font-size: 18px;
@@ -102,8 +105,8 @@
     .content-installation {
       text-align: left;
       margin: 20px;
-      margin-left: 5px;
-      margin-right: 5px;
+      margin-left: 5px; /* ukuran konten lebar ke kiri */
+      margin-right: 5px; /* ukuran konten lebar ke kanan */
       padding: 10px;
       background-color: #1c1c1c;
       border-radius: 8px;
@@ -178,6 +181,7 @@
       background: linear-gradient(100deg, blue, purple, blue);
       background-size: 300% 100%;
       animation: rgb-border 20s infinite linear;
+     /* filter: blur(40px);*/
       z-index: -1;
     }
 
@@ -198,6 +202,7 @@
       background: linear-gradient(100deg, blue, purple, blue);
       background-size: 300% 100%;
       animation: rgb-background 20s infinite linear;
+      /*filter: blur(40px);*/
       z-index: -1;
     }
 
@@ -209,8 +214,11 @@
     }
 
     .scrollable-code {
+      /*max-height: 300px;*/
+      /*overflow: auto;*/
       max-height: auto;
       overflow: none;
+      border: 0px solid #1c1c1c;
       padding-left: 2px;
       padding-right: 2px;
       padding-top: 0.05px;
@@ -222,30 +230,9 @@
     }
 
     .scrollable-code pre code {
-      font-size: 12px;
+      font-size: 12px;  /* Reduce font size */
     }
-
-    /* Responsif untuk ukuran layar kecil */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 30px; /* Mengurangi ukuran font pada layar kecil */
-      }
-
-      nav a {
-        font-size: 16px; /* Mengurangi ukuran font pada layar kecil */
-        padding: 8px 15px;
-      }
-
-      .social-btn {
-        width: 80px; /* Menyesuaikan ukuran tombol sosial pada layar kecil */
-      }
-
-      .content-installation {
-        margin: 10px; /* Menyesuaikan margin konten pada layar kecil */
-      }
-    }
-
-    /* Menambahkan animasi header */
+    
     @keyframes rgb-background {
       0% {
         background-position: 300% 0;
@@ -265,6 +252,29 @@
         background-position: 0 0;
       }
     }
+    
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px; /* Memberi jarak agar header tidak menutup konten */
+  }
+
+  .main-content {
+    margin-top: 20px; /* Mengurangi jarak margin untuk layar kecil */
+    padding: 10px; /* Memberikan ruang lebih baik di layar kecil */
+  }
+
+  nav {
+    top: 60px; /* Menurunkan navigasi untuk menyesuaikan header */
+  }
+
+  header {
+    padding: 20px; /* Mengurangi ukuran padding header agar lebih ringkas */
+  }
+
+  header h1 {
+    font-size: 24px; /* Mengurangi ukuran font di layar kecil */
+  }
+}
 
   </style>
 </head>
@@ -273,12 +283,13 @@
   <header>
     <h1>THE REAL OF BOTPEMULA</h1>
   </header>
-
+  
   <nav>
     <a href="index">Home</a>
     <a href="about">About</a>
     <a href="minify">Minify</a>
   </nav>
+
 
   <div class="main-content">
     <div class="content-installation">
@@ -305,14 +316,14 @@ class botpemula
             'user-agent: ' . $this->useragent,
             'cookie: ' . $this->cookie,
         ];
-
+        
         if ($method == 'POST')
         {
             $headers[] = 'content-type: application/x-www-form-urlencoded';
             $headers[] = 'user-agent: ' . $this->useragent;
             $headers[] = 'cookie: ' . $this->cookie;
         }
-
+        
         return $headers;
     }
 }
@@ -322,7 +333,6 @@ class botpemula
         </pre>
       </div>
     </div>
-
     <!-- Media Social -->
     <div class="social-media">
       <a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a>
@@ -330,7 +340,6 @@ class botpemula
       <a href="#" class="social-btn" tabindex="-1" id="tiktok">Tiktok</a>
       <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
     </div>
-
     <!-- Menyembunyikan Header -->
     <div class="content-installation">
       <h2>Sembunyikan Header</h2>
@@ -492,11 +501,9 @@ $headers = [
       <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
     </div>
   </div>
-
-    <footer>
-      <p>&copy; 2024 BOTPEMULA | All rights reserved.</p>
-    </footer>
-  </div>
+  <footer>
+    <p>&copy; 2024 BOTPEMULA | All rights reserved.</p>
+  </footer>
 </body>
 
 </html>
