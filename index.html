@@ -4,10 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BOTPEMULA - A website providing tutorials and tools for web development, programming, and more.">
+  <meta name="keywords" content="BOTPEMULA, web development, programming, PHP, tutorials, scripts">
+  <meta name="author" content="BOTPEMULA">
+  <meta property="og:title" content="BOTPEMULA - Home">
+  <meta property="og:description" content="BOTPEMULA - A website providing tutorials and tools for web development, programming, and more.">
+  <meta property="og:image" content="URL_of_your_image.jpg"> <!-- Ganti dengan URL gambar asli -->
+  <meta property="og:url" content="https://yourwebsite.com"> <!-- Ganti dengan URL asli -->
+  <meta property="og:type" content="website">
+
   <title>BOTPEMULA - Home</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
-
   <style>
     * {
       margin: 0;
@@ -38,7 +46,6 @@
 
     header h1 {
       color: lightgray;
-      /*color: #03fcf4;*/
       font-size: 40px;
       z-index: 1;
     }
@@ -53,7 +60,6 @@
       background: linear-gradient(100deg, blue, purple, blue);
       background-size: 300% 100%;
       animation: rgb-background 20s infinite linear;
-      /*filter: blur(40px);*/
       z-index: -1;
     }
 
@@ -71,7 +77,6 @@
 
     nav a {
       color: lightgray;
-      /*color: #03fcf4;*/
       text-decoration: none;
       padding: 10px 20px;
       font-size: 18px;
@@ -89,7 +94,7 @@
       padding: 10px;
       text-align: center;
       margin-top: 120px;
-      max-width: 95%; /* Allows content to be a bit wider on mobile */
+      max-width: 100%; /* Allows content to be a bit wider on mobile */
       margin-left: auto;
       margin-right: auto;
     }
@@ -97,8 +102,8 @@
     .content-installation {
       text-align: left;
       margin: 20px;
-      margin-left: 5px; /* ukuran konten lebar ke kiri */
-      margin-right: 5px; /* ukuran konten lebar ke kanan */
+      margin-left: 5px;
+      margin-right: 5px;
       padding: 10px;
       background-color: #1c1c1c;
       border-radius: 8px;
@@ -111,7 +116,7 @@
     }
 
     .content-installation p {
-      font-size: 12px;
+      font-size: 14px;
       margin-bottom: 10px;
       color: lightgray;
     }
@@ -173,7 +178,6 @@
       background: linear-gradient(100deg, blue, purple, blue);
       background-size: 300% 100%;
       animation: rgb-border 20s infinite linear;
-     /* filter: blur(25px);*/
       z-index: -1;
     }
 
@@ -194,7 +198,6 @@
       background: linear-gradient(100deg, blue, purple, blue);
       background-size: 300% 100%;
       animation: rgb-background 20s infinite linear;
-      /*filter: blur(40px);*/
       z-index: -1;
     }
 
@@ -206,37 +209,43 @@
     }
 
     .scrollable-code {
-      /*max-height: 300px;*/
       max-height: auto;
       overflow: none;
-      /*overflow: auto;*/
-      border: 0px solid #1c1c1c;
       padding-left: 2px;
       padding-right: 2px;
       padding-top: 0.05px;
       padding-bottom: 0.05px;
       background-color: ;
       border-radius: 10px;
-      /*
-      background: linear-gradient(100deg, blue, purple, blue);
-      background-size: 300% 100%;
-      animation: rgb-background 20s infinite linear;
-      filter: blur(40px);*/
       z-index: 0;
       box-sizing: border-box;
     }
 
     .scrollable-code pre code {
-      font-size: 12px;  /* Reduce font size */
-    }
-    
-    /* Responsive Design */
-    @media (max-width: 600px) {
-      .main-content {
-        padding: 15px;
-        max-width: 100%;
+      font-size: 12px;
     }
 
+    /* Responsif untuk ukuran layar kecil */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 30px; /* Mengurangi ukuran font pada layar kecil */
+      }
+
+      nav a {
+        font-size: 16px; /* Mengurangi ukuran font pada layar kecil */
+        padding: 8px 15px;
+      }
+
+      .social-btn {
+        width: 80px; /* Menyesuaikan ukuran tombol sosial pada layar kecil */
+      }
+
+      .content-installation {
+        margin: 10px; /* Menyesuaikan margin konten pada layar kecil */
+      }
+    }
+
+    /* Menambahkan animasi header */
     @keyframes rgb-background {
       0% {
         background-position: 300% 0;
@@ -257,40 +266,6 @@
       }
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 600px) {
-      .main-content {
-        padding: 15px;
-        max-width: 100%;
-      }
-
-      header h1 {
-        font-size: 30px;
-      }
-
-      nav a {
-        font-size: 16px;
-        padding: 8px 16px;
-      }
-
-      .content-installation h2 {
-        font-size: 20px;
-      }
-
-      .content-installation p {
-        font-size: 14px;
-      }
-
-      .social-btn {
-        font-size: 16px;
-        width: 80px;
-        height: 35px;
-      }
-
-      footer p {
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 
@@ -298,13 +273,12 @@
   <header>
     <h1>THE REAL OF BOTPEMULA</h1>
   </header>
-  
+
   <nav>
     <a href="index">Home</a>
     <a href="about">About</a>
     <a href="minify">Minify</a>
   </nav>
-
 
   <div class="main-content">
     <div class="content-installation">
@@ -331,14 +305,14 @@ class botpemula
             'user-agent: ' . $this->useragent,
             'cookie: ' . $this->cookie,
         ];
-        
+
         if ($method == 'POST')
         {
             $headers[] = 'content-type: application/x-www-form-urlencoded';
             $headers[] = 'user-agent: ' . $this->useragent;
             $headers[] = 'cookie: ' . $this->cookie;
         }
-        
+
         return $headers;
     }
 }
@@ -348,6 +322,7 @@ class botpemula
         </pre>
       </div>
     </div>
+
     <!-- Media Social -->
     <div class="social-media">
       <a href="#" class="social-btn" tabindex="-1" id="instagram">Instagram</a>
@@ -355,6 +330,7 @@ class botpemula
       <a href="#" class="social-btn" tabindex="-1" id="tiktok">Tiktok</a>
       <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
     </div>
+
     <!-- Menyembunyikan Header -->
     <div class="content-installation">
       <h2>Sembunyikan Header</h2>
@@ -516,9 +492,11 @@ $headers = [
       <a href="#" class="social-btn" tabindex="-1" id="discord">Discord</a>
     </div>
   </div>
-  <footer>
-    <p>&copy; 2024 BOTPEMULA | All rights reserved.</p>
-  </footer>
+
+    <footer>
+      <p>&copy; 2024 BOTPEMULA | All rights reserved.</p>
+    </footer>
+  </div>
 </body>
 
 </html>
