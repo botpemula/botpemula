@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="description" content="BOTPEMULA - A website providing tutorials and tools for web development, programming, and more.">
+    <meta name="keywords" content="BOTPEMULA, web development, programming, PHP, tutorials, scripts">
+    <meta name="author" content="BOTPEMULA">
+    <meta property="og:title" content="BOTPEMULA - About">
+    <meta property="og:description" content="BOTPEMULA - A website providing tutorials and tools for web development, programming, and more.">
+    <meta property="og:image" content="URL_of_your_image.jpg">
+    <meta property="og:url" content="https://botpemula.github.io/botpemula/about">
+    <meta property="og:type" content="website">
+    <title>BOTPEMULA - About</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-minify/1.0.1/js-minify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/css-minify/1.0.1/css-minify.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 100vh
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #1c1c1c;
+        z-index: 1000
+      }
+
+      header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(100deg, #00f, purple, #00f);
+        background-size: 300% 100%;
+        animation: rgb-background 12s infinite linear;
+        z-index: -1
+      }
+
+      header h1 {
+        position: relative;
+        color: #fff;
+        font-size: 40px;
+        z-index: 1
+      }
+
+      nav {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #1c1c1c;
+        padding: 10px;
+        z-index: 1;
+        display: flex;
+        justify-content: center
+      }
+
+      nav a {
+        color: #d3d3d3;
+        text-decoration: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        margin: 0 15px;
+        transition: background-color .3s
+      }
+
+      nav a:hover {
+        background-color: gray;
+        border-radius: 5px;
+        outline: 0 !important;
+        box-shadow: none !important;
+        -webkit-tap-highlight-color: transparent;
+        -moz-box-shadow: transparent
+      }
+
+      .main-content {
+        flex-grow: 1;
+        padding: 10px;
+        text-align: center;
+        margin-top: 120px;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto
+      }
+
+      .content-installation {
+        text-align: left;
+        margin: 20px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 10px;
+        background-color: #1c1c1c;
+        border-radius: 8px
+      }
+
+      .content-installation h2 {
+        font-size: 24px;
+        margin-bottom: 10px
+      }
+
+      .content-installation p {
+        font-size: 16px;
+        margin-bottom: 10px
+      }
+
+      .content-installation a {
+        color: #03fcf4;
+        text-decoration: none;
+        font-weight: 700;
+        transition: .3s
+      }
+
+      .content-installation a:hover {
+        color: #03d3fc
+      }
+
+      h1 {
+        text-align: center;
+        color: #fff
+      }
+
+      footer {
+        position: relative;
+        padding: 10px;
+        text-align: center;
+        overflow: hidden
+      }
+
+      footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(100deg, #00f, purple, #00f);
+        background-size: 300% 100%;
+        animation: rgb-background 12s infinite linear;
+        z-index: -1
+      }
+
+      footer p {
+        position: relative;
+        color: gray;
+        font-size: 16px;
+        z-index: 1
+      }
+
+      @media (max-width:768px) {
+        body {
+          padding-top: 120px
+        }
+
+        .main-content {
+          margin-top: 20px;
+          padding: 10px
+        }
+
+        nav {
+          top: 60px
+        }
+
+        header {
+          padding: 20px
+        }
+
+        header h1 {
+          font-size: 24px
+        }
+      }
+
+      .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+      }
+
+      .social-btn {
+        padding: 10px 20px;
+        color: grey;
+        text-decoration: none;
+        background-color: transparent;
+        border: 3px solid transparent;
+        border-radius: 5px;
+        position: relative;
+        overflow: hidden;
+        width: 100px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        transition: 0s;
+        outline: 0 !important;
+        box-shadow: none !important;
+        -webkit-tap-highlight-color: transparent
+      }
+
+      :focus {
+        outline: 0 !important;
+        box-shadow: none !important
+      }
+
+      .social-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 10px solid transparent;
+        border-radius: 5px;
+        box-sizing: border-box;
+        background: linear-gradient(100deg, #00f, purple, #00f);
+        background-size: 300% 100%;
+        mask: radial-gradient(transparent 0, #fff 0);
+        -webkit-mask: radial-gradient(transparent 0, #fff 0);
+        animation: rgb-border 12s infinite linear;
+        z-index: -1
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>THE REAL OF BOTPEMULA</h1>
+    </header>
+    <nav>
+      <a href="index">Home</a>
+      <a href="about">About</a>
+      <a href="minify">Minify</a>
+    </nav>
+    <div class="main-content">
+        <div class="content-installation">
+            <h1>About Botpemula</h1>
+
+        <div class="content-installation">
+          <p>Welcome to BOTPEMULA, a platform that offers web development tutorials, programming guides, and useful tools for developers. Whether you're a beginner or experienced, we provide easy-to-follow tutorials and practical tools to help you learn and grow your skills.</p>
+        </div>
+        </div>
+        <div class="content-installation">
+        <h1>What We Offer</h1>
+        <div class="content-installation">
+        <p>Our website offers tutorials and guides for various programming languages, including PHP, JavaScript, Python, and more. We also provide tools like code minifiers, which can help optimize your code for better performance.</p>
+      </div>
+        </div>
+      <div class="social-media">
+        <a href="https://www.instagram.com" class="social-btn" id="instagram">Instagram</a>
+        <a href="https://www.youtube.com" class="social-btn" id="youtube">YouTube</a>
+        <a href="https://discord.com" class="social-btn" id="discord">Discord</a>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2024 BOTPEMULA | All rights reserved.</p>
+    </footer>
+  </body>
+</html>
